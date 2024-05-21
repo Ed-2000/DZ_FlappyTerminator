@@ -56,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 5018919507115318597}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.65, y: 1, z: 0}
+  m_LocalPosition: {x: -0.85, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 5891888157142492404}
   - component: {fileID: 2690708767012692346}
   - component: {fileID: 8884236632171483591}
+  - component: {fileID: 1689106043652012473}
   - component: {fileID: 7770640880339481754}
   m_Layer: 0
   m_Name: Enemy
@@ -162,7 +163,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5218984168271544969}
   m_BodyType: 1
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
@@ -212,7 +213,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0045193434, y: 1.0188433}
+  m_Offset: {x: 0, y: 1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -223,7 +224,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8282726, y: 2.7928798}
+  m_Size: {x: 0.8, y: 2.8}
   m_EdgeRadius: 0
 --- !u!114 &8884236632171483591
 MonoBehaviour:
@@ -235,6 +236,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6ad89802d3e6a448ad73166a837d271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1689106043652012473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5218984168271544969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 984a04cd188f8da41be0a86975fe4568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &7770640880339481754
@@ -252,7 +265,7 @@ MonoBehaviour:
   _bulletSpawner: {fileID: 0}
   _startBulletTransform: {fileID: 6833653877346061567}
   _exitBulletTransform: {fileID: 666932895054235404}
-  _bulletSpeed: 15
+  _bulletSpeed: 10
 --- !u!1 &7429558440805837572
 GameObject:
   m_ObjectHideFlags: 0

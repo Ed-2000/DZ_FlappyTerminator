@@ -15,7 +15,7 @@ public abstract class Atacker : MonoBehaviour
         bullet.Rigidbody2D.velocity = direction.normalized * _bulletSpeed;
     }
 
-    public void InitBulletsSpawner(BulletsSpawner bulletsSpawner)
+    protected void SetBulletSpawner(BulletsSpawner bulletsSpawner)
     {
         _bulletSpawner = bulletsSpawner;
     }

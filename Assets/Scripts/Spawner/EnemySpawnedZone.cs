@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class EnemySpawnedZone : MonoBehaviour
 {
+    [SerializeField] private float _xStep = 5.0f;
+
+    private float _xPosition;
     private float _minX;
     private float _maxX;
     private float _minY;
@@ -16,8 +19,9 @@ public class EnemySpawnedZone : MonoBehaviour
     {
         Vector2 transformPosition = transform.position;
         Vector2 position = new Vector2();
+        _xPosition += _xStep;
 
-        position.x = transformPosition.x + Random.Range(_minX, _maxX);
+        position.x = _xPosition;
         position.y = transformPosition.y + Random.Range(_minY, _maxY);
 
         return position;
@@ -32,5 +36,7 @@ public class EnemySpawnedZone : MonoBehaviour
         _minX = -_maxX;
         _maxY = scale.y / variableToSubtractHalf;
         _minY = -_maxY;
+
+        _xPosition = Random.Range(_minX, _maxX);
     }
 }

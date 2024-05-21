@@ -18,7 +18,7 @@ public class EnemiesSpawner : Spawner<Enemy>
     protected override Enemy Create()
     {
         Enemy enemy = base.Create();
-        enemy.Init(_bulletsSpawner);
+        enemy.Init(_bulletsSpawner, this.GetComponent<EnemiesSpawner>());
 
         return enemy;
     }

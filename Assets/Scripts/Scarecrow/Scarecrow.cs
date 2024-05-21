@@ -29,7 +29,7 @@ public class Scarecrow : MonoBehaviour, IAlive
 
     private void ProcessCollision(IInteracteble interacteble)
     {
-            TakeDamage();
+        TakeDamage();
     }
 
     private void Reset()

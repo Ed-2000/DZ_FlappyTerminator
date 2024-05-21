@@ -55,11 +55,12 @@ public abstract class Spawner<T> : MonoBehaviour where T : MonoBehaviour
 
     public virtual T Get()
     {
-        return _pool.Get(); 
+        return _pool.Get();
     }
 
     public virtual void Release(T poolObject)
     {
-        _pool.Release(poolObject);
+        if (poolObject != null)
+            _pool.Release(poolObject);
     }
 }
